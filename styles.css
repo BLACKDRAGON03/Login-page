@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --color-dark: hsla(22, 27%, 37%, 0.368);
+  --color-darker: hsl(22, 49%, 32%);
+  --color-light: hsl(53, 96%, 70%);
+  --color-mid: hsl(54, 100%, 50%);
+  --color-lighter: hsl(53, 100%, 79%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-darker);
+  background-color: var(--color-lighter);
+  overflow: none;
+  font-weight: 500;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* gap: 10px; */
+}
+@media (min-width: 768px) {
+  .app-container {
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+  }
+}
+.big-div {
+  background-color: var(--color-mid);
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+  padding: 20px 20px 40px;
+}
+.list {
+  min-height: 81px;
+  max-height: 235px;
+  overflow-y: scroll;
+  border: 1px solid var(--color-dark);
+
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-light);
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.list-heading {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+.input-box {
+  position: relative;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+  margin: 5px 0 20px 0;
+}
+.input-box input {
+  background-color: var(--color-lighter);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  padding: 10px 40px 8px 14px;
+  color: var(--color-darker);
+  font-size: 16px;
+  border-radius: 5px;
+}
+.input-box input::placeholder {
+  color: var(--color-dark);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.fa-plus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.list li {
+  list-style: none;
+  font-size: 16px;
+  padding: 8px 40px 8px 14px;
+  position: relative;
+  cursor: move;
+}
+.list li:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.fa-xmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.list li.dragging {
+  background-color: rgb(0, 0, 0, 0.1);
+}

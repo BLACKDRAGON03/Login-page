@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/39fd4df332.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="app-container">
+      <div class="to-do big-div">
+        <h1 class="list-heading">TO DO</h1>
+        <div class="input-box">
+          <input spellcheck=false type="text" id="add-todo" placeholder="Add a task..." /><i
+            onclick="addTodo()"
+            class="fa-solid fa-plus"
+          ></i>
+        </div>
+
+        <ul onclick="removeTask(event)" class="list todo-list"></ul>
+      </div>
+
+      <div class="doing big-div">
+        <h1 class="list-heading">DOING</h1>
+        <div class="input-box">
+          <input spellcheck=false type="text" id="add-doing" placeholder="Add a task..." /><i
+            onclick="addDoing()"
+            class="fa-solid fa-plus"
+          ></i>
+        </div>
+
+        <ul onclick="removeTask(event)" class="list doing-list"></ul>
+      </div>
+
+      <div class="done big-div">
+        <h1 class="list-heading">DONE</h1>
+        <div class="input-box">
+          <input spellcheck=false type="text" id="add-done" placeholder="Add a task..." /><i
+            onclick="addDone()"
+            class="fa-solid fa-plus"
+          ></i>
+        </div>
+
+        <ul onclick="removeTask(event)" class="list done-list"></ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
